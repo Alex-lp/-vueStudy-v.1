@@ -1,94 +1,27 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+  <p>这是按钮</p>
+   <el-row>
+  <el-button disabled>默认按钮</el-button>
+  <el-button type="primary" disabled>主要按钮</el-button>
+  <el-button type="success" disabled>成功按钮</el-button>
+  <el-button type="info" disabled>信息按钮</el-button>
+  <el-button type="warning" disabled>警告按钮</el-button>
+  <el-button type="danger" @click="a">危险按钮</el-button>
+</el-row>
   </div>
 </template>
 
 <script>
+import {a} from '../assets/common/js/a.js';
 export default {
   name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  props: {
+    msg: String,
+  },
+  methods: {
+    a () {
+      a();
     }
   }
 }
@@ -96,8 +29,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+  @import '../assets/common/css/a.css';
+h3 {
+  margin: 40px 0 0;
 }
 ul {
   list-style-type: none;
