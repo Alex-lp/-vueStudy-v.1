@@ -1,3 +1,3 @@
-export  function a() {
-    console.log("111");
+export function a () {
+  console.log('111')
 }

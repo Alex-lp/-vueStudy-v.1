@@ -13,15 +13,15 @@
 </template>
 
 <script>
-import {a} from '../assets/common/js/a.js';
+import {a} from '@/assets/common/js/a.js'
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String,
+    msg: String
   },
   methods: {
     a () {
-      a();
+      a()
     }
   }
 }
@@ -29,7 +29,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import '../assets/common/css/a.css';
+@import './../assets/common/css/a.css';
+
 h3 {
   margin: 40px 0 0;
 }
