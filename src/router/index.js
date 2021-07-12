@@ -1,22 +1,25 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
-import LoginContainer from '@/components/Login/LoginContainer'
+// import LoginContainer from '@/components/Login/LoginContainer'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      // component: HelloWorld
-      redirect: '/login'
-    },
-    {
-      path: '/login',
-      name: 'LoginContainer',
-      component: LoginContainer
-    }
-  ]
+const routes = [
+  {
+    path: '/',
+    name: 'HelloWorld',
+    // component: () => import('@/components/HelloWorld')
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    name: 'LoginContainer',
+    component: () => import('@/components/Login/LoginContainer')
+  }
+]
+
+const router = new VueRouter({
+  routes: routes
 })
+export default router
