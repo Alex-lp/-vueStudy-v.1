@@ -2,17 +2,17 @@
   <div class="hello">
   <p>这是按钮</p>
    <el-row>
-  <el-button disabled>默认按钮</el-button>
   <el-button type="primary" disabled>主要按钮</el-button>
   <el-button type="success" disabled>成功按钮</el-button>
   <el-button type="info" disabled>信息按钮</el-button>
-  <el-button type="warning" disabled>警告按钮</el-button>
   <el-button type="danger" @click="a">危险按钮</el-button>
+  <loginWrapper></loginWrapper>
 </el-row>
   </div>
 </template>
 
 <script>
+import loginWrapper from '@/components/Login/LoginWrapper'
 import {a} from '@/assets/common/js/a.js'
 export default {
   name: 'HelloWorld',
@@ -23,6 +23,9 @@ export default {
     a () {
       a()
     }
+  },
+  components: {
+    loginWrapper
   }
 }
 </script>
